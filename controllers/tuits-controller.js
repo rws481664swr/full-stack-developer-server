@@ -1,16 +1,45 @@
 import posts from "./tuits.js";
+
 let tuits = posts;
 
+const dummyvalues = {
+     "topic": "Web Development",
+    "postedBy": {
+        "username": "Anonymouse"
+    },
+    "liked": false,
+    "verified": false,
+    "handle": "ReactJS",
+    "time": "10 years",
+    "title": "n/a",
+    "logo-image": "/images/react-blue.png",
+    "avatar-image": "/images/react-blue.png",
+    "stats": {
+        "comments": 0,
+        "retuits": 0,
+        "likes": 0
+    }
+}
+
+const getId = () => {
+    return new Date().getTime() + ''
+}
 const createTuit = (req, res) => {
-    const newTuit = req.body;
-    newTuit._id = (new Date()).getTime()+'';
+    const newTuit = {
+        ...req.body,
+        _id: getId(),
+        ...dummyvalues
+    };
     newTuit.likes = 0;
+    console.log(newTuit)
     tuits.push(newTuit);
     res.json(newTuit);
 }
 
 
-const findAllTuits = (req, res) => res.json(tuits);
+const findAllTuits = (req, res) => {
+    res.json(tuits)
+};
 
 const deleteTuit = (req, res) => {
     const tuitdIdToDelete = req.params.tid;
