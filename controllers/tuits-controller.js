@@ -7,6 +7,7 @@ const dummyvalues = {
     "postedBy": {
         "username": "Anonymouse"
     },
+    "disliked":false,
     "liked": false,
     "verified": false,
     "handle": "ReactJS",
@@ -17,7 +18,8 @@ const dummyvalues = {
     "stats": {
         "comments": 0,
         "retuits": 0,
-        "likes": 0
+        "likes": 0,
+        "dislikes":0
     }
 }
 
@@ -38,6 +40,7 @@ const createTuit = (req, res) => {
 
 
 const findAllTuits = (req, res) => {
+    console.log(tuits)
     res.json(tuits)
 };
 

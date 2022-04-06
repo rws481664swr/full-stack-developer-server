@@ -5,6 +5,7 @@ export default [
         "postedBy": {
             "username": "ReactJS"
         },
+        "disliked":false,
         "liked": true,
         "verified": false,
         "handle": "ReactJS",
@@ -17,6 +18,7 @@ export default [
         "logo-image": "/images/react-blue.png",
         "avatar-image": "/images/react-blue.png",
         "stats": {
+            "dislikes":2,
             "comments": 123,
             "retuits": 234,
             "likes": 345
@@ -28,6 +30,7 @@ export default [
         "postedBy": {
             "username": "SpaceX"
         },
+        "disliked":false,
         "liked": false,
         "verified": false,
         "handle": "spacex",
@@ -41,6 +44,7 @@ export default [
         "avatar-image": "/images/node.png",
         "tuits": "120K",
         "stats": {
+            "dislikes":2,
             "comments": 123,
             "retuits": 234,
             "likes": 345
@@ -52,6 +56,7 @@ export default [
         "postedBy": {
             "username": "Scott Manley"
         },
+        "disliked":false,
         "liked": true,
         "verified": true,
         "handle": "DJSnM",
@@ -65,6 +70,7 @@ export default [
         "stats": {
             "comments": 123,
             "retuits": 234,
+            "dislikes":2,
             "likes": 345
         }
     },
@@ -74,6 +80,7 @@ export default [
         "postedBy": {
             "username": "jQuery"
         },
+        "disliked":false,
         "liked": false,
         "verified": false,
         "handle": "jQuery",
@@ -86,6 +93,7 @@ export default [
         "stats": {
             "comments": 123,
             "retuits": 234,
+            "dislikes":2,
             "likes": 345
         }
     },
@@ -95,6 +103,7 @@ export default [
         "postedBy": {
             "username": "NodeJS"
         },
+        "disliked":false,
         "liked": true,
         "verified": true,
         "handle": "NodeJS",
@@ -107,7 +116,8 @@ export default [
         "stats": {
             "comments": 123,
             "retuits": 234,
-            "likes": 345
+            "likes": 345,
+            "dislikes":2
         }
     }
 ]
