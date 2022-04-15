@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 
 const LOCAL= 'mongodb://localhost:27017/webdev'
 const url =process.env.MONGO_CONNECTION_STRING || LOCAL;
+console.log(`Using database: ${url===LOCAL ? "local":url}`)
 mongoose.connect(url);
 const app = express();
 
