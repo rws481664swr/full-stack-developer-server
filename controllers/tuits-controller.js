@@ -27,10 +27,11 @@ const getId = () => {
 
 const createTuit =async (req, res) => {
     const newTuit = {
+     ...dummyvalues,
         ...req.body,
         _id: getId(),
-        likes:0,
-        ...dummyvalues
+        likes:0
+       
     };
     const insertedTuit = await dao.createTuit(newTuit);
     res.json(insertedTuit);
@@ -45,14 +46,14 @@ const findAllTuits = async (req, res) => {
 const deleteTuit = async  (req, res) => {
     const tuitdIdToDelete = req.params.tid;
     const status = await dao.deleteTuit(tuitdIdToDelete);
-    res.sendStatus(status);
+    res.sendStatus(200);
 }
 
 
 const updateTuit =async  (req, res) => {
     const tuitdIdToUpdate = req.params.tid;
     const status = await dao.updateTuit(tuitdIdToUpdate,req.body)
-    res.sendStatus(status);
+    res.sendStatus(200);
 }
 
 
