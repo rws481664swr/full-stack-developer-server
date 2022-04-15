@@ -3,7 +3,11 @@ import userController   from "./controllers/user-controller.js";
 import helloController  from "./controllers/hello-controller.js";
 import tuitsController   from "./controllers/tuits-controller.js";
 import cors from "cors";
+import mongoose from "mongoose";
 
+const LOCAL= 'mongodb://localhost:27017/webdev'
+const url =process.env.MONGO_CONNECTION_STRING || LOCAL;
+mongoose.connect(url);
 const app = express();
 
 app.use(cors());
